@@ -5,7 +5,7 @@ function doSomething3 () {
     game.showLongText("śćźńłó co tam co tam", DialogLayout.Bottom)
 }
 function doSomething () {
-    for (let value of list) {
+    for (let value of tiles.getTilesByType(sprites.castle.tileDarkGrass2)) {
         tiles.placeOnRandomTile(mySprite, sprites.castle.tileGrass2)
     }
     game.showLongText("śćźńłó co tam co tam", DialogLayout.Bottom)
