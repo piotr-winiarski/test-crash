@@ -42,6 +42,7 @@ function doSomething4 () {
         tiles.placeOnRandomTile(mySprite, sprites.castle.tileGrass2)
     }
     game.showLongText("śćźńłó co tam co tam", DialogLayout.Bottom)
+    game.showLongText("śćźńłó co tam co tam", DialogLayout.Bottom)
 }
 let mySprite: Sprite = null
 game.showLongText("śćźńłó co tam co tam", DialogLayout.Bottom)
