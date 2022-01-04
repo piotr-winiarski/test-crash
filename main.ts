@@ -308,6 +308,35 @@ function createPlayer () {
     global_playerPosition.x = sprite_PLAYER.x
     global_playerPosition.y = sprite_PLAYER.y
 }
+function createPlayer2 () {
+    sprite_PLAYER = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . f f f f . . . . . . 
+        . . . . f f f 2 2 f f f . . . . 
+        . . . f f f 2 2 2 2 f f f . . . 
+        . . f f f e e e e e e f f f . . 
+        . . f f e 2 2 2 2 2 2 e e f . . 
+        . . f e 2 f f f f f f 2 e f . . 
+        . . f f f f e e e e f f f f . . 
+        . f f e f b f 4 4 f b f e f f . 
+        . f e e 4 1 f d d f 1 4 e e f . 
+        . . f e e d d d d d d e e f . . 
+        . . 4 f e e 4 4 4 4 e e f 4 . . 
+        . . 4 4 f 4 4 5 5 4 4 f 4 4 . . 
+        . . . . . f f f f f f . . . . . 
+        . . . . . f f . . f f . . . . . 
+        `, SpriteKind.Player)
+    if (sprite_PLAYER.x > 0 || sprite_PLAYER.y > 0) {
+        sprite_PLAYER.setPosition(global_playerPosition.x, global_playerPosition.y)
+    } else {
+        tiles.placeOnRandomTile(sprite_PLAYER, sprites.builtin.forestTiles0)
+    }
+    scene.cameraFollowSprite(sprite_PLAYER)
+    controller.moveSprite(sprite_PLAYER)
+    global_playerPosition.x = sprite_PLAYER.x
+    global_playerPosition.y = sprite_PLAYER.y
+}
 function fillPlacesOnMap () {
     for (let value of tiles.getTilesByType(sprites.builtin.forestTiles0)) {
         sprite_Village1 = sprites.create(img`
