@@ -1,4 +1,22 @@
+function doSomething3 () {
+    for (let value of tiles.getTilesByType(sprites.castle.tileDarkGrass2)) {
+        tiles.placeOnRandomTile(mySprite, sprites.castle.tileGrass2)
+    }
+    game.showLongText("śćźńłó co tam co tam", DialogLayout.Bottom)
+}
 function doSomething () {
+    for (let value of tiles.getTilesByType(sprites.castle.tileDarkGrass2)) {
+        tiles.placeOnRandomTile(mySprite, sprites.castle.tileGrass2)
+    }
+    game.showLongText("śćźńłó co tam co tam", DialogLayout.Bottom)
+}
+function doSomething2 () {
+    for (let value of tiles.getTilesByType(sprites.castle.tileDarkGrass2)) {
+        tiles.placeOnRandomTile(mySprite, sprites.castle.tileGrass2)
+    }
+    game.showLongText("śćźńłó co tam co tam", DialogLayout.Bottom)
+}
+function doSomething4 () {
     for (let value of tiles.getTilesByType(sprites.castle.tileDarkGrass2)) {
         tiles.placeOnRandomTile(mySprite, sprites.castle.tileGrass2)
     }
