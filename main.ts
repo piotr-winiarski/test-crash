@@ -1,6 +1,9 @@
 namespace SpriteKind {
     export const data = SpriteKind.create()
 }
+scene.onHitWall(SpriteKind.Player, function (sprite, location) {
+	
+})
 function clearScreen () {
     scene.setBackgroundColor(0)
     scene.setBackgroundImage(img`
@@ -292,13 +295,16 @@ function createPlayer () {
     if (sprite_PLAYER.x > 0 || sprite_PLAYER.y > 0) {
         sprite_PLAYER.setPosition(global_playerPosition.x, global_playerPosition.y)
     } else {
-        tiles.placeOnRandomTile(sprite_PLAYER, img`myTile`)
+        tiles.placeOnRandomTile(sprite_PLAYER, sprites.castle.tileDarkGrass2)
     }
     scene.cameraFollowSprite(sprite_PLAYER)
     controller.moveSprite(sprite_PLAYER)
     global_playerPosition.x = sprite_PLAYER.x
     global_playerPosition.y = sprite_PLAYER.y
 }
+scene.onOverlapTile(SpriteKind.Player, assets.tile`transparency16`, function (sprite, location) {
+	
+})
 function loadMapScreen () {
     clearScreen()
     scene.setBackgroundColor(7)
