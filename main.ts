@@ -308,8 +308,6 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`transparency16`, function (sp
 function loadMapScreen () {
     clearScreen()
     scene.setBackgroundColor(7)
-    tiles.setTilemap(tilemap`level2`)
-    createPlayer()
 }
 let sprite_PLAYER: Sprite = null
 let global_playerPosition: Sprite = null
